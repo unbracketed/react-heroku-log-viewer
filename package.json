@@ -9,13 +9,12 @@
     "hot-dev-server": "webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 2992 --inline",
     "build": "webpack --config webpack-production.config.js --progress --profile --colors",
     "start-dev": "node lib/server-development",
-    "start": "node lib/server-production",
+    "start": "node lib/server-production"
   },
   "keywords": [
     "webpack",
     "react",
     "immstruct",
-    "",
     "hot"
   ],
   "author": "Brian Luft",
