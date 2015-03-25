@@ -1,5 +1,5 @@
 {
-  "name": "react-starter",
+  "name": "heroku-log-viewer",
   "version": "0.0.0",
   "description": "",
   "main": "app/app.js",
@@ -9,16 +9,16 @@
     "hot-dev-server": "webpack-dev-server --config webpack-hot-dev-server.config.js --hot --progress --colors --port 2992 --inline",
     "build": "webpack --config webpack-production.config.js --progress --profile --colors",
     "start-dev": "node lib/server-development",
-    "start": "node lib/server-production"
+    "start": "node lib/server-production",
   },
   "keywords": [
     "webpack",
     "react",
-    "starter",
-    "boilerplate",
+    "immstruct",
+    "",
     "hot"
   ],
-  "author": "Tobias Koppers @sokra",
+  "author": "Brian Luft",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^4.6.6",
@@ -28,7 +28,10 @@
     "express": "^4.7.2",
     "extract-text-webpack-plugin": "^0.3.5",
     "file-loader": "^0.8.1",
+    "fixed-data-table": "0.1.1",
+    "heroku-log-session": "^0.1.1",
     "html-loader": "^0.2.2",
+    "immstruct": "^1.4.0",
     "jsx-loader": "^0.12.0",
     "less": "^2.1.2",
     "less-loader": "^2.0.0",
