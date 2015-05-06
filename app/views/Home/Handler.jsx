@@ -38,7 +38,7 @@ if (!Object.assign) {
 var FixedDataTable = require('fixed-data-table');
 var Table = FixedDataTable.Table;
 var Column = FixedDataTable.Column;
-
+//var ReactPivot = require('react-pivot')
 
 
 var MainHandler = React.createClass({
@@ -46,10 +46,30 @@ var MainHandler = React.createClass({
   render() {
 
     // Table data as a list of array.
+    //var rows = atom.cursor('logs').toArray().map(log => ({raw: log}))
+    //console.log('render', rows)
+
+    // var reducer = function(row, memo) {
+    //   memo.totalLines = (memo.totalLines || 0) + 1;
+    //   return memo;
+    // };
+    // var calc = []
+
+          // <ReactPivot
+          //   rows={rows}
+          //   dimensions={[{value: 'raw', title: 'Logs'}]}
+          //   reduce={reducer}
+          //   calculations={calc}
+          //   activeDimensions={['Logs']}
+          //   />
+
+    //TODO only display recent
+
     var rows = atom.cursor('logs').toArray()
     function rowGetter(rowIndex) {
       return [rows[rowIndex]];
     }
+
 
     return (
       <div>
@@ -65,8 +85,10 @@ var MainHandler = React.createClass({
               label="Col 1"
               width={1000}
               dataKey={0}
-            />
+
+              />
           </Table>
+
         </div>
       </div>
     )

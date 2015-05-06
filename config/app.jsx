@@ -2,8 +2,13 @@ var React = require("react")
 var atom = require('../app/store')
 var View = require('../app/views/Home/Handler')
 
+import csp from "js-csp"
 
-var source      = new EventSource('/logs/lebowski-haiku');
+const ch = csp.chan()
+
+
+//TODO get app from path
+var source      = new EventSource('/logs/oneup-prod');
 source.addEventListener('message', function(message) {
 	atom.cursor('logs').update(logs => logs.push(message.data))
 });
@@ -13,3 +18,4 @@ function render(){
 }
 
 atom.on('swap', render)
+render()
